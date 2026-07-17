@@ -1,14 +1,14 @@
-# Agent Notes — VVARDROBE (WEAR_STUDIO)
-**Last updated:** 2026-06-24
-**Status:** Code pushed to GitHub (`sudo-prog/WEAR-Studio`, branch: master). React 19 ESM interop fixed. Builds successfully.
+# Agent Notes — Wear3D Studio (Wear3D_STUDIO)
+**Last updated:** 2026-07-17
+**Status:** Code pushed to GitHub (`sudo-prog/Wear3D-Studio`, branch: master) and deployed to Vercel (separate project `wear3d-studio`). React 19 ESM interop fixed. Builds successfully.
 
 ---
 
 ## Project Overview
 
-AI virtual wardrobe / outfit try-on app. Upload a photo of yourself and an outfit to see how it looks on you. Uses Gemini AI for image generation. Frontend-only, no backend.
+AI virtual wardrobe / 3D outfit try-on app. Upload a photo of yourself and an outfit to see how it looks on you. Uses Gemini AI for image generation. Frontend-only, no backend.
 
-- **App name:** VVARDROBE
+- **App name:** Wear3D Studio
 - **Stack:** React/Vite, Framer Motion, @google/genai (Gemini), tsparticles, Tailwind CSS
 - **Type:** Single-page app, frontend only
 - **Files:** ~20 source files, ~500 LOC
@@ -121,6 +121,6 @@ AI virtual wardrobe / outfit try-on app. Upload a photo of yourself and an outfi
 | `types.ts` | TypeScript type definitions |
 
 ## Mobile UI Compliance (MOBILE-UI-STANDARD.md)
-- **Status:** CODE FIX PUSHED (master b43b8ae) — NOT deployed: wear-studio.vercel.app is a different team's Nomo Stage app; deploy FLAGGED pending decision
+- **Status:** ✅ DEPLOYED (live: wear3d-studio-*.vercel.app, separate Vercel project, 2026-07-17). T-1 44px fix applied + pushed. Replit deps: NONE found (no .replit, no @replit/*, 0 code refs) — nothing to remove.
 - **Verified:** 2026-07-17 via /tmp/mobile_audit.mjs @390x844 (tap-target >=44px T-1, overflow, safe-area, console errors)
 - **T-1 fix:** enforce 44x44px on touch/coarse + <=767px; backend API queries gated behind DEV||VITE_API_ENABLED to silence 404s on static Vercel deploy.
