@@ -70,3 +70,37 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #9ca3af; /* Darker gray on hover */
 }
+
+/* MOBILE-UI-STANDARD.md (T-1): enforce >= 44x44px tap targets on touch /
+   narrow viewports. Scoped to interactive controls — inline prose links are
+   intentionally excluded to avoid introducing horizontal overflow. */
+@media (pointer: coarse), (max-width: 767px) {
+  button,
+  a[role="button"],
+  [role="button"],
+  input[type="button"],
+  input[type="submit"],
+  .btn,
+  [class*="btn"],
+  [class*="button"],
+  [class*="nav-item"],
+  [class*="tab"],
+  [class*="icon"],
+  [class*="toolbar"] [class*="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  /* Promote interactive anchors/controls to flex so the 44px minimum applies */
+  a[role="button"],
+  [class*="btn"],
+  [class*="button"],
+  [class*="nav-item"],
+  [class*="tab"],
+  aside a,
+  header a,
+  nav a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
